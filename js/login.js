@@ -3,8 +3,16 @@ function authenticate() {
     var password = document.getElementById("password").value;
   
     if (username === "" || password === "") {
+
       alert("Por favor, completa ambos campos.");
     } else {
       window.location.href = "index.html";
     }
   }
+
+
+
+  function isAuthenticated() {
+    return localStorage.getItem('authenticated') === 'true';
+  }
+  
