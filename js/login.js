@@ -14,5 +14,5 @@ function authenticate() {
 
   function isAuthenticated() {
     return localStorage.getItem('authenticated') === 'true';
-  }
-  
+
+  } 
