@@ -28,3 +28,20 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Error:', error);
     });
 });
+
+function isAuthenticated() {
+  return localStorage.getItem("authenticated") === "true";
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const usernameDisplay = document.createElement("span");
+  usernameDisplay.classList.add("nav-link");
+
+  if (isAuthenticated()) {
+      const savedUsername = localStorage.getItem("username");
+      if (savedUsername) {
+          usernameDisplay.textContent = `${savedUsername}`;
+          document.querySelector(".navbar-nav").appendChild(usernameDisplay);
+      }
+  }
+});

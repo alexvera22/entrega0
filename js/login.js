@@ -6,6 +6,8 @@ function authenticate() {
 
       alert("Por favor, completa ambos campos.");
     } else {
+      localStorage.setItem('authenticated', 'true'); //se guarda para mostrar que esta autentificado
+      localStorage.setItem('username', username); //se guarda en el localstorage el nombre de usuario
       window.location.href = "index.html";
     }
   }
