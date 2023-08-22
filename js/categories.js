@@ -157,4 +157,4 @@ function isAuthenticated() {
             document.querySelector(".navbar-nav").appendChild(usernameDisplay);
         }
     }
-  });
+  }); //aca se repite la misma funcion para que aparezca en categories.html el nombre de usuario

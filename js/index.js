@@ -26,14 +26,14 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   document.addEventListener("DOMContentLoaded", function() { 
-    const usernameDisplay = document.createElement("span");
-    usernameDisplay.classList.add("nav-link"); //esto va a hacer que se cree una nueva "opcion" o algo parecido en la barra de navegacion
+    const usernameDisplay = document.createElement("span"); //se crea una constante de tipo span vacia
+    usernameDisplay.classList.add("nav-link"); //esto es para dale el estilo que tiene la clase nav-link al tipo span
 
     if (isAuthenticated()) {
-        const savedUsername = localStorage.getItem("username"); //se crea la const en donde va a ir el nombre de usuario
+        const savedUsername = localStorage.getItem("username"); //se crea la const en donde va a ir el nombre de usuario que esta guardado en el localstorage
         if (savedUsername) {
             usernameDisplay.textContent = `${savedUsername}`; //se le añade la const donde esta el nombre de usuario a la constante que va en la barra de navegacion
-            document.querySelector(".navbar-nav").appendChild(usernameDisplay); //y aca se terminaria de agregar el nombre a la barra de navegacion usando el apendchild
+            document.querySelector(".navbar-nav").appendChild(usernameDisplay); //y aca se terminaria de agregar la constante tipo span con el nombre de usuario a la barra de navegacion nabvar-nav usando el apendchild
         }
     }
 });

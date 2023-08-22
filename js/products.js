@@ -33,7 +33,7 @@ function isAuthenticated() {
   return localStorage.getItem("authenticated") === "true";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {  
   const usernameDisplay = document.createElement("span");
   usernameDisplay.classList.add("nav-link");
 
@@ -44,4 +44,4 @@ document.addEventListener("DOMContentLoaded", function() {
           document.querySelector(".navbar-nav").appendChild(usernameDisplay);
       }
   }
-});
+});  //aca se repite la misma funcion para que aparezca en products.html el nombre de usuario

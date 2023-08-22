@@ -163,4 +163,4 @@ function isAuthenticated() {
             document.querySelector(".navbar-nav").appendChild(usernameDisplay);
         }
     }
-  });
+  });  //aca se repite la misma funcion para que aparezca en Vender el nombre de usuario
