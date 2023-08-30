@@ -40,8 +40,28 @@
     <div class="container">
       <div class="container text-center p-5"> <!--p-5 sirve para el padding-->
         <h1>Productos</h1>
-        <h5 style="color: rgb(132, 133, 134);">Verás aquí todos los productos de la categoría autos</h5>
+        <h5 style="color:#000000a8 ;">Verás aquí todos los productos de la categoría autos</h5>
       </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col text-end">
+          <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+            <input type="radio" class="btn-check" name="options" id="sortAsc">
+            <label class="btn btn-light" for="sortAsc">Menor precio</label>
+            <input type="radio" class="btn-check" name="options" id="sortDesc">
+            <label class="btn btn-light" for="sortDesc">Mayor precio</label>
+            <input type="radio" class="btn-check" name="options" id="sortByCount" checked>
+            <label class="btn btn-light" for="sortByCount"><i class="fas fa-sort-amount-down mr-1" alt="Más vendidos"></i></label>
+            <input type="search" id="searchInput" placeholder="Buscar...">
+            <input type="number" id="minPriceInput" placeholder="Precio mínimo">
+            <input type="number" id="maxPriceInput" placeholder="Precio máximo">
+            <button id="filtroRangoButton">Aplicar filtro</button>
+            <button class="btn btn-link btn-sm" id="clearRangeFilterButton">Limpiar</button>
+          </div>
+        </div>
+      </div>
+      
     </div>
     <div class="container text-center list-group" id="listaDeAutos"></div>
   </main>
@@ -64,6 +84,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/products.js"></script>
+  
 </body>
 
 </html>

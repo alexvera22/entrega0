@@ -1,20 +1,19 @@
 function authenticate() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-  
-    if (username === "" || password === "") {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
 
-      alert("Por favor, completa ambos campos.");
-    } else {
-      localStorage.setItem('authenticated', 'true'); //se guarda para mostrar que esta autentificado
-      localStorage.setItem('username', username); //se guarda en el localstorage el nombre de usuario
-      window.location.href = "index.html";
-    }
+  if (username && password) {
+
+    localStorage.setItem('authenticated', 'true');
+    localStorage.setItem('username', username); //se guarda en el localstorage el nombre de usuario 
+    window.location.href = 'index.html';
+  } else {
+    alert('Por favor ingrese un usuario y contraseña válidos.');
   }
+}
 
 
 
-  function isAuthenticated() {
-    return localStorage.getItem('authenticated') === 'true';
-
-  } 
+function isAuthenticated() {
+  return localStorage.getItem('authenticated') === 'true';
+}
