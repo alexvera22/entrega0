@@ -22,29 +22,62 @@ nav a {
   user-select: none;
 }
 
-@media (min-width: 768px) {
+@media (width>=768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
 }
 
 .jumbotron {
-  height: 50vh;
+  width: 100%;
   padding: 5em inherit;
   margin-bottom: 0;
   background-color: #53C0FB;
   background: url('../img/cover_back.png');
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: initial;
   background-repeat: no-repeat;
   color: black;
   font-weight: bold;
 }
 
-@media (min-width: 768px) {
+body[data-bs-theme="dark"] .jumbotron {
+  background: url('../img/dark_cover_back.jpg');
+  background-size: contain;
+  background-position: initial;
+  background-repeat: no-repeat;
+}
+
+
+@media (width<=768px) {
   .jumbotron {
+    height: 200px;
+  }
+}
+
+@media (width<=500px) {
+  .jumbotron {
+    height: 140px;
+  }
+}
+
+@media (width>=768px) {
+  .jumbotron {
+    height: 300px;
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+}
+
+@media (width>=1125px) {
+  .jumbotron {
+    height: 400px;
+  }
+}
+
+@media (width>=1500px) {
+  .jumbotron {
+    height: 550px;
   }
 }
 
@@ -188,40 +221,91 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
-.list-group-item{ text-align: left; color:#000000a8 };
 
-
-/* Estilo para el título de las imágenes */
-#productImages p {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.list-group-item {
+  text-align: left
 }
 
-/* Estilo para los contenedores de imágenes */
-.image-container {
-  display: inline-block;
-  margin-right: 10px; /* Espacio entre las imágenes */
+/* Estilos para el contenedor del carrusel */
+#productImages {
+  max-width: 100%;
 }
 
-/* Estilo para las imágenes */
-.image-container img {
-  max-width: 150px; /* Ancho máximo de las imágenes */
-  cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que se puede hacer clic */
+/* Estilo para las imágenes dentro del carrusel */
+#productImages .carousel-inner .carousel-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
+
+/* Estilos para los indicadores del carrusel */
+#productImages .carousel-indicators {
+  position: static;
+  /* Ajustar la posición según tus necesidades */
+  margin-top: 10px;
+  /* Ajustar la separación superior según tus necesidades */
+  text-align: center;
+}
+
+/* Estilos para los controles del carrusel (flechas izquierda y derecha) */
+#productImages .carousel-control-prev,
+#productImages .carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo semi-transparente para los controles */
+}
+
+/* Estilo para los iconos de las flechas */
+#productImages .carousel-control-prev-icon,
+#productImages .carousel-control-next-icon {
+  background-color: #fff;
+  /* Color de fondo de los iconos de flecha */
+  border-radius: 50%;
+  /* Hacer que los iconos de flecha sean circulares */
+  color: #000;
+  /* Color del icono de flecha */
+  font-size: 24px;
+  /* Tamaño del icono de flecha */
+  padding: 10px;
+  /* Espaciado interior del icono de flecha */
+}
+
 
 #commentsContainer {
-  background-color: #f8f9fa; /* Cambia el color de fondo si lo deseas */
-  padding: 20px; /* Añade un espacio alrededor del contenido de los comentarios */
-  border-radius: 10px; /* Aplica bordes redondeados */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Agrega un sombreado suave */
+  padding: 20px;
+  /* Añade un espacio alrededor del contenido de los comentarios */
+  border-radius: 10px;
+  /* Aplica bordes redondeados */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  /* Agrega un sombreado suave */
 }
 
 /* Estilos para los comentarios individuales */
 .comment-container {
-  margin-bottom: 20px; /* Espacio entre comentarios individuales */
+  margin-bottom: 20px;
+  /* Espacio entre comentarios individuales */
 }
-#p0  { 
+
+#p0 {
   padding: 8px;
   margin: 25px;
+}
+
+/*tamaño productos relacionados*/
+.prodR-container {
+  margin-bottom: 10px;
+  width: 10px;
+  display: flex;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.imgPrR {
+  width: 200px;
+}
+
+.prodR-button {
+  display: inline-block;
+  /* Hace que los botones se muestren uno al lado del otro */
+  margin-right: 10px;/
 }
